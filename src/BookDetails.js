@@ -29,7 +29,7 @@ function BookDetails({ bookId, onBack, refreshBooks }) {
       return;
     }
 
-    fetch(`http://localhost:5000/books/${bookId}/reviews`, {
+    fetch(`https://backend-booklistt.onrender.com/books/${bookId}/reviews`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, rating, comment })
@@ -50,7 +50,7 @@ function BookDetails({ bookId, onBack, refreshBooks }) {
 
   // Delete review
   const handleDeleteReview = (reviewId) => {
-    fetch(`http://localhost:5000/books/${bookId}/reviews/${reviewId}`, {
+    fetch(`https://backend-booklistt.onrender.com/books/${bookId}/reviews/${reviewId}`, {
       method: "DELETE"
     })
       .then(() => {
@@ -73,7 +73,7 @@ function BookDetails({ bookId, onBack, refreshBooks }) {
 
   // Save edit
   const handleSaveEdit = () => {
-    fetch(`http://localhost:5000/books/${bookId}/reviews/${editReviewId}`, {
+    fetch(`https://backend-booklistt.onrender.com/books/${bookId}/reviews/${editReviewId}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -178,4 +178,5 @@ function BookDetails({ bookId, onBack, refreshBooks }) {
 }
 
 export default BookDetails;
+
 
