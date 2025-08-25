@@ -7,7 +7,7 @@ function App() {
 
   // Fetch all books
   const fetchBooks = () => {
-    fetch("https://backend-booklistt.onrender.com")
+    fetch("https://backend-booklistt.onrender.com/books")
       .then(res => res.json())
       .then(data => setBooks(data))
       .catch(err => console.error("Error fetching books:", err));
