@@ -12,7 +12,7 @@ function BookDetails({ bookId, onBack, refreshBooks }) {
 
   // Fetch book details
   const fetchBookDetails = () => {
-    fetch(`http://localhost:5000/books/${bookId}`)
+      fetch(`https://backend-booklistt.onrender.com/books/${bookId}`)
       .then(res => res.json())
       .then(data => setBook(data))
       .catch(err => console.error("Error fetching book details:", err));
@@ -178,3 +178,4 @@ function BookDetails({ bookId, onBack, refreshBooks }) {
 }
 
 export default BookDetails;
+
